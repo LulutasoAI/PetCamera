@@ -18,4 +18,4 @@ class Info_Security():
         """
         idk some security procedure.
         """
-        pass
+        return True

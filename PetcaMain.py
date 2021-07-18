@@ -8,6 +8,9 @@ class PetCam():
     def __init__(self):
         pass
 
+    def requestreceiver(self):
+        #if message there return True
+        return False
     def main(self):
         #Camera Activation
         #...
@@ -16,9 +19,14 @@ class PetCam():
         password = ""
         secure = security()
         while True:
+            frame = "" #to get the frame from the webcam via opencv
             #gather information
 
+            requested = requestreceiver()     #this waits for the message to come.
+
             if requested == True:
-                #send the information to APP or discord, Whatever
+
                 secure.password_check(password,passlist)
+                #send the information to APP or discord, Whatever
+                requested = False
                 pass
