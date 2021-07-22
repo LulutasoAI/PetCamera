@@ -18,4 +18,7 @@ class Info_Security():
         """
         idk some security procedure.
         """
-        return True
+        if password in passlist:
+            return True
+        else:
+            return False
